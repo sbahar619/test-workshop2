@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: user30-hello-world-svc
+spec:
+  ports:
+    - protocol: TCP
+      port: 9876
+      targetPort: 9999
+  selector:
+    app: user30-hello-world

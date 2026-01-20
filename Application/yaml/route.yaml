@@ -1,0 +1,11 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name:  user30-hello-world-route
+spec:
+  to:
+    kind: Service
+    name:  user30-hello-world-svc
+    weight: 100
+  port:
+    targetPort: 9999
