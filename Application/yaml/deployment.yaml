@@ -17,4 +17,4 @@ spec:
           ports:
             - containerPort: 9999
               protocol: TCP
-          image: 'quay.io/sbahar/test-workshop:v1'
+          image: 'quay.io/sbahar/test-workshop:v2'
