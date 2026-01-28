@@ -1,0 +1,20 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: {{ .Chart.Name }}-deployment
+spec:
+  replicas: {{ .Values.ReplicaNumber }}
+  selector:
+    matchLabels:
+      app: {{ .Chart.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Chart.Name }}
+    spec:
+      containers:
+        - name: hello-world
+          ports:
+            - containerPort: {{ .Values.containers.containerPort }}
+              protocol: TCP
+          image: {{ .Values.containers.image }}:{{ .Values.containers.tag }}
