@@ -12,9 +12,17 @@ spec:
       labels:
         app: {{ .Chart.Name }}
     spec:
+      volumes:
+        - name: index-html
+          configMap:
+            name: '{{ .Chart.Name }}-html'
+            defaultMode: 420
       containers:
         - name: hello-world
           ports:
             - containerPort: {{ .Values.containers.containerPort }}
               protocol: TCP
           image: {{ .Values.containers.image }}:{{ .Values.containers.tag }}
+          volumeMounts:
+          - name: index-html
+            mountPath: /tmp/html 
