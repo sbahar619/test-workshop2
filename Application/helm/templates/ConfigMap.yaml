@@ -4,7 +4,7 @@ metadata:
   name: '{{ .Chart.Name }}-html'
 immutable: false
 data:
-  index2.html: |-
+  index3.html: |-
     <html>
     <head>
       <title>HELM Application</title>
