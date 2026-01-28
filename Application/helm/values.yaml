@@ -3,7 +3,7 @@ ReplicaNumber: 3
 containers:
   containerPort: 9999
   image: 'quay.io/sbahar/test-workshop'
-  tag: 'v6'
+  tag: 'v7'
 
 service:
   servicePort: 8444
